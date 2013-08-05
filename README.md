@@ -1,4 +1,4 @@
 maoli.js
 ========
 
-JavaScript help library for common brazilian business rules
+JavaScript helper library for common brazilian business rules like CPF and CNPJ
