@@ -11,8 +11,8 @@
     maoli.Cpf = (function () {
 
         var regexValidations = {
-                loose: "^\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}$",
-                strict: "^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$"
+                loose: /^(\d{3}\.\d{3}\.\d{3}\-\d{2})|(\d{11})$/ig,
+                strict: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/ig
             },
 
             sanitize = function (value) {
@@ -61,7 +61,7 @@
                     return false;
                 }
 
-                if (!(new RegExp(regexValidations[punctuation], "ig")).test(value)) {
+                if (!(new RegExp(regexValidations[punctuation])).test(value)) {
                     return false;
                 }
 
@@ -90,8 +90,8 @@
             multiplier2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
 
             regexValidations = {
-                loose: "^\\d{2}\\.?\\d{3}\\.?\\d{3}/?\\d{4}\\-?\\d{2}$",
-                strict: "^\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}\\-\\d{2}$"
+                loose: /^(\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2})|(\d{14})$/ig,
+                strict: /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/ig
             },
 
             sanitize = function (value) {
@@ -138,7 +138,7 @@
                     return false;
                 }
 
-                if (!(new RegExp(regexValidations[punctuation], "ig")).test(value)) {
+                if (!(new RegExp(regexValidations[punctuation])).test(value)) {
                     return false;
                 }
 

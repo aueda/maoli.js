@@ -27,6 +27,10 @@
         ok(maoli.Cnpj.validate(strictValidCnpj, "strict"));
     });
 
+    test("Validate Returns False If CNPJ Is Half Punctuated And Valid And Loose", function() {
+        ok(maoli.Cnpj.validate("63.9433150001-92", "loose") === false);
+    });
+
 }(window.Maoli));
 
 (function (maoli) {
@@ -56,6 +60,10 @@
 
     test("Validate Returns True If CPF Is Valid And Strict", function () {
         ok(maoli.Cpf.validate(strictValidCpf, "strict"));
+    });
+
+    test("Validate Returns False If CPF Is Half Punctuated And Valid And Loose", function() {
+        ok(maoli.Cpf.validate("714.025.65860", "loose") === false);
     });
 
 }(window.Maoli));
