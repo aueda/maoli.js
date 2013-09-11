@@ -6,7 +6,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.1.0.0";
+    maoli.version = "0.2.0.0";
 
     maoli.Cpf = (function () {
 
