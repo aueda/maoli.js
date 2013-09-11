@@ -1,4 +1,9 @@
-﻿(function (window) {
+﻿// ==ClosureCompiler==
+// @output_file_name maoli-min.js
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// ==/ClosureCompiler==
+
+(function (window) {
 
     "use strict";
 
