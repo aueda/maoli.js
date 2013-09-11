@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
+    <metadata minClientVersion="2.5">
         <id>Maoli.js</id>
-        <version>0.1.0.0</version>
+        <version>0.2.0.0</version>
         <title>Maoli.js</title>
         <authors>Adriano Ueda</authors>
         <owners>Adriano Ueda</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/aueda/maoli-js</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
-        <description>JavaScript helper library for common brazilian business rules like CPF and CNPJ</description>
+        <description>Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ). For documentation visit https://github.com/aueda/maoli.js</description>
+        <summary>
+        Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ).
+        </summary> 
         <copyright>Copyright (c) 2013 Adriano Ueda</copyright>
         <language />
-        <tags>JavaScript cpf cnpj</tags>
+        <tags>JavaScript CPF CNPJ</tags>
     </metadata>
     <files>
         <file src="maoli-min.js" target="content\Scripts\maoli-min.js" />
