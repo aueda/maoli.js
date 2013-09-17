@@ -1,5 +1,5 @@
 ﻿// ==ClosureCompiler==
-// @output_file_name maoli-min.js
+// @output_file_name maoli.min.js
 // @compilation_level SIMPLE_OPTIMIZATIONS
 // ==/ClosureCompiler==
 
@@ -11,7 +11,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.2.0.0";
+    maoli.version = "0.2.1.0";
 
     maoli.Cpf = (function () {
 
