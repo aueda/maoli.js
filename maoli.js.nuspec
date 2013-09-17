@@ -18,7 +18,7 @@
         <tags>JavaScript CPF CNPJ</tags>
     </metadata>
     <files>
-        <file src="maoli-min.js" target="content\Scripts\maoli-min.js" />
+        <file src="maoli.min.js" target="content\Scripts\maoli.min.js" />
         <file src="maoli.js" target="content\Scripts\maoli.js" />
     </files>
 </package>
