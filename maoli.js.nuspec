@@ -7,7 +7,7 @@
         <authors>Adriano Ueda</authors>
         <owners>Adriano Ueda</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-        <projectUrl>https://github.com/aueda/maoli-js</projectUrl>
+        <projectUrl>https://github.com/aueda/maoli.js</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ). For documentation visit https://github.com/aueda/maoli.js</description>
         <summary>
