@@ -13,6 +13,46 @@
 
     maoli.version = "0.2.1.0";
 
+    maoli.Cep = (function () {
+        var regexValidations = {
+            loose: /^(\d{5}\-\d{3})|(\d{5})$/ig,
+            strict: /^(\d{5}\-\d{3})$/ig
+        },
+
+        sanitize = function (value) {
+            var sanitized = value
+                  .trim()
+                  .toLowerCase()
+                  .replace(/\-/g, "");
+
+            return sanitized;
+        },
+
+        validate = function (value, punctuation) {
+
+            punctuation = punctuation || "loose";
+
+            if (value.trim() === "") {
+                return false;
+            }
+
+            if (!regexValidations[punctuation]) {
+                return false;
+            }
+
+            if (!(new RegExp(regexValidations[punctuation])).test(value)) {
+                return false;
+            }
+
+            return true;
+        };
+
+        return {
+            validate: validate
+        };
+
+    }());
+
     maoli.Cpf = (function () {
 
         var regexValidations = {
