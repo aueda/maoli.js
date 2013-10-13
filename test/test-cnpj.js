@@ -7,6 +7,10 @@
         ok = window.QUnit.ok,
         runCnpjTests = function () {
 
+            test("Validate Returns False If CNPJ Is Empty", function () {
+                ok(!maoli.Cnpj.validate(""));
+            });
+
             test("Validate Returns True If CNPJ Is Valid", function () {
                 ok(maoli.Cnpj.validate("63943315000192"));
             });

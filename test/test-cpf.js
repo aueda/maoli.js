@@ -7,6 +7,10 @@
         ok = window.QUnit.ok,
         runCpfTests = function () {
 
+            test("Validate Returns False If CPF Is Empty", function () {
+                ok(!maoli.Cpf.validate(""));
+            });
+
             test("Validate Returns True If CPF Is Valid", function () {
                 ok(maoli.Cpf.validate("71402565860"));
             });
