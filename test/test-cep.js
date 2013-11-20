@@ -7,6 +7,10 @@
         ok = window.QUnit.ok,
         runCepTests = function () {
 
+            test("Validate Returns False If CEP Is Empty", function () {
+                ok(!maoli.Cep.validate(""));
+            });
+
             test("Validate Returns True If CEP Is Valid", function () {
                 ok(maoli.Cep.validate("12345678"));
             });
