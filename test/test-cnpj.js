@@ -7,6 +7,13 @@
         ok = window.QUnit.ok,
         runCnpjTests = function () {
 
+            test("Two calls in a row to Validate must have the same return", function () {
+                var returnOne = maoli.Cnpj.validate("63943315000192"),
+                    returnTwo = maoli.Cnpj.validate("63943315000192");
+
+                ok(returnOne === returnTwo);
+            });
+
             test("Validate Returns True If CNPJ Is Valid", function () {
                 ok(maoli.Cnpj.validate("63943315000192"));
             });
