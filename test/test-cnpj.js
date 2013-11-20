@@ -10,6 +10,7 @@
             test("Validate Returns False If CNPJ Is Empty", function () {
                 ok(!maoli.Cnpj.validate(""));
             });
+
             test("Two calls in a row to Validate must have the same return", function () {
                 var returnOne = maoli.Cnpj.validate("63943315000192"),
                     returnTwo = maoli.Cnpj.validate("63943315000192");
