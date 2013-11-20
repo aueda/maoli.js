@@ -10,6 +10,12 @@
             test("Validate Returns False If CPF Is Empty", function () {
                 ok(!maoli.Cpf.validate(""));
             });
+            test("Two calls in a row to Validate must have the same return", function () {
+                var returnOne = maoli.Cpf.validate("71402565860"),
+                    returnTwo = maoli.Cpf.validate("71402565860");
+
+                ok(returnOne === returnTwo);
+            });
 
             test("Validate Returns True If CPF Is Valid", function () {
                 ok(maoli.Cpf.validate("71402565860"));

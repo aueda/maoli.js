@@ -41,9 +41,33 @@
 
     maoli.Cpf = (function () {
 
-        var regexValidations = {
-                loose: /^(\d{3}\.\d{3}\.\d{3}\-\d{2})|(\d{11})$/ig,
-                strict: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/ig
+        var regexFlags = "gi",
+
+            regexValidations = {
+                loose: "^(\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2})|(\\d{11})$",
+                strict: "^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$"
+            },
+
+            formatIsValid = function (value, punctuation) {
+                var regExp = null;
+
+                punctuation = punctuation || "loose";
+
+                if (value.trim() === "") {
+                    return false;
+                }
+
+                if (!regexValidations[punctuation]) {
+                    return false;
+                }
+
+                regExp = new RegExp(regexValidations[punctuation], regexFlags);
+
+                if (!regExp.test(value)) {
+                    return false;
+                }
+
+                return true;
             },
 
             sanitize = function (value) {
@@ -82,18 +106,8 @@
                     calcDigit2 = 0,
                     isValid = false;
 
-                punctuation = punctuation || "loose";
-
-                if (value.trim() === "") {
-                    return false;
-                }
-
-                if (!regexValidations[punctuation]) {
-                    return false;
-                }
-
-                if (!(new RegExp(regexValidations[punctuation])).test(value)) {
-                    return false;
+                if (!formatIsValid(value, punctuation)) {
+                    return isValid;
                 }
 
                 value = sanitize(value);
@@ -120,9 +134,33 @@
         var multiplier1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
             multiplier2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
 
+            regexFlags = "gi",
+
             regexValidations = {
-                loose: /^(\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2})|(\d{14})$/ig,
-                strict: /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/ig
+                loose: "^(\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2})|(\\d{14})$",
+                strict: "^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2}$"
+            },
+
+            formatIsValid = function (value, punctuation) {
+                var regExp = null;
+
+                punctuation = punctuation || "loose";
+
+                if (value.trim() === "") {
+                    return false;
+                }
+
+                if (!regexValidations[punctuation]) {
+                    return false;
+                }
+
+                regExp = new RegExp(regexValidations[punctuation], regexFlags);
+
+                if (!regExp.test(value)) {
+                    return false;
+                }
+
+                return true;
             },
 
             sanitize = function (value) {
@@ -159,18 +197,8 @@
                     calcDigit2 = 0,
                     isValid = false;
 
-                punctuation = punctuation || "loose";
-
-                if (value.trim() === "") {
-                    return false;
-                }
-
-                if (!regexValidations[punctuation]) {
-                    return false;
-                }
-
-                if (!(new RegExp(regexValidations[punctuation])).test(value)) {
-                    return false;
+                if (!formatIsValid(value, punctuation)) {
+                    return isValid;
                 }
 
                 value = sanitize(value);
