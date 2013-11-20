@@ -15,9 +15,10 @@
 
     maoli.Cep = (function () {
         var regexValidations = {
-            loose: /^(\d{5}\-\d{3}|\d{8})$/ig,
-            strict: /^(\d{5}\-\d{3})$/ig
-        },
+                loose: /^(\d{5}\-\d{3}|\d{8})$/ig,
+                strict: /^(\d{5}\-\d{3})$/ig
+            },
+
             validate = function (value, punctuation) {
                 var isValid = false;
 
