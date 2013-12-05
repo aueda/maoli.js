@@ -1,15 +1,27 @@
 #Maoli.js
 
-Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ).
+Maoli.js is JavaScript helper library for common brazilian business rules (CEP, CPF and CNPJ).
 
 Currently implements:
 
+* CEP validation
 * CPF validation
 * CNPJ validation
 
-For .NET server-side validation of CPF and CNPJ, please see [Maoli](https://github.com/aueda/maoli/).
+For .NET server-side validation of CEP, CPF and CNPJ, please see [Maoli](https://github.com/aueda/maoli/).
 
 ## Documentation
+
+### Cep
+
+``Maoli.Cep.validate(cep)`` - checks if a string value is a valid CEP representation. Returns true if CEP string is valid; false otherwise.
+
+```JavaScript
+	if (window.Maoli.Cep.validate("99999-999"))
+	{
+	    console.log("CEP is valid");
+	}
+```
 
 ### Cpf
 
