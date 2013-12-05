@@ -20,7 +20,7 @@
     </metadata>
     <files>
         <file src="maoli.min.js" target="content\Scripts\maoli.min.js" />
-        <file src="maoli.min.js" target="content\Scripts\maoli.min.map" />
+        <file src="maoli.min.map" target="content\Scripts\maoli.min.map" />
         <file src="maoli.js" target="content\Scripts\maoli.js" />
     </files>
 </package>
