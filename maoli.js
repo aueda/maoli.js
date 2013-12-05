@@ -11,7 +11,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.2.2-alpha";
+    maoli.version = "0.2.2";
 
     maoli.Cep = (function () {
         var regexValidations = {
