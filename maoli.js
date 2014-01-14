@@ -14,13 +14,15 @@
     maoli.version = "0.2.2";
 
     maoli.Cep = (function () {
-        var regexValidations = {
-                loose: /^(\d{5}\-\d{3}|\d{8})$/ig,
-                strict: /^(\d{5}\-\d{3})$/ig
+        var regexFlags = "gi",
+
+            regexValidations = {
+                loose: "^(\\d{5}\\-\\d{3}|\\d{8})$",
+                strict: "^(\\d{5}\\-\\d{3})$"
             },
 
             validate = function (value, punctuation) {
-                var isValid = false;
+                var regExp = null;
 
                 punctuation = punctuation || "loose";
 
@@ -30,9 +32,13 @@
                     return false;
                 }
 
-                isValid = (new RegExp(regexValidations[punctuation])).test(value);
+                regExp = new RegExp(regexValidations[punctuation], regexFlags);
 
-                return isValid;
+                if (!regExp.test(value)) {
+                    return false;
+                }
+
+                return true;
             };
 
         return {

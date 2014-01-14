@@ -15,6 +15,10 @@
                 ok(maoli.Cep.validate("12345678"));
             });
 
+            test("Validate Returns True If CEP Is Valid And Strict", function () {
+                ok(maoli.Cep.validate("03451-050"));
+            });
+
             test("Validate Returns False If CEP Is Invalid", function () {
                 ok(!maoli.Cep.validate("1ab323"));
             });
