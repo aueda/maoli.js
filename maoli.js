@@ -3,6 +3,9 @@
 // @compilation_level SIMPLE_OPTIMIZATIONS
 // ==/ClosureCompiler==
 
+/*globals
+    module
+*/
 (function (window) {
 
     "use strict";
@@ -247,4 +250,7 @@
         };
     }());
 
+    if (module !== undefined) {
+        module.exports = maoli;
+    }
 }(this));
