@@ -15,6 +15,22 @@
                 ok(maoli.Cep.validate("12345678"));
             });
 
+            test("Validate Returns True If CEP Is Valid And Has Leading Whitespace", function () {
+                ok(maoli.Cep.validate("     12345-678"));
+            });
+
+            test("Validate Returns True If CEP Is Valid And Has Trailing Whitespace", function () {
+                ok(maoli.Cep.validate("12345-678     "));
+            });
+
+            test("Validate Returns True If CEP Is Valid And Has Leading And Trailing Whitespace", function () {
+                ok(maoli.Cep.validate("    12345-678     "));
+            });
+
+            test("Validate Returns False If CEP Is Null", function () {
+                ok(!maoli.Cep.validate(null));
+            });
+
             test("Validate Returns True If CEP Is Valid And Strict", function () {
                 ok(maoli.Cep.validate("03451-050"));
             });

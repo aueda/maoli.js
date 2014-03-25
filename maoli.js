@@ -13,6 +13,17 @@
 
     maoli.version = "0.2.2";
 
+    if (typeof String.prototype.trim !== "function") {
+        String.prototype.trim = function () {
+
+            if (!this) {
+                return this;
+            }
+
+            return this.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
+        };
+    }
+
     maoli.Cep = (function () {
         var regexFlags = "gi",
 
@@ -23,6 +34,8 @@
 
             validate = function (value, punctuation) {
                 var regExp = null;
+
+                value = value || "";
 
                 punctuation = punctuation || "loose";
 
@@ -58,9 +71,13 @@
             formatIsValid = function (value, punctuation) {
                 var regExp = null;
 
+                value = value || "";
+
                 punctuation = punctuation || "loose";
 
-                if (value.trim() === "") {
+                value = value.trim();
+
+                if (value === "") {
                     return false;
                 }
 
@@ -151,9 +168,13 @@
             formatIsValid = function (value, punctuation) {
                 var regExp = null;
 
+                value = value || "";
+
                 punctuation = punctuation || "loose";
 
-                if (value.trim() === "") {
+                value = value.trim();
+
+                if (value === "") {
                     return false;
                 }
 

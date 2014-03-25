@@ -18,6 +18,22 @@
                 ok(returnOne === returnTwo);
             });
 
+            test("Validate Returns True If CPF Is Valid And Has Leading Whitespace", function () {
+                ok(maoli.Cpf.validate("     71402565860"));
+            });
+
+            test("Validate Returns True If CPF Is Valid And Has Trailing Whitespace", function () {
+                ok(maoli.Cpf.validate("71402565860     "));
+            });
+
+            test("Validate Returns True If CPF Is Valid And Has Leading And Trailing Whitespace", function () {
+                ok(maoli.Cpf.validate("    71402565860     "));
+            });
+
+            test("Validate Returns False If CPF Is Null", function () {
+                ok(!maoli.Cpf.validate(null));
+            });
+
             test("Validate Returns True If CPF Is Valid", function () {
                 ok(maoli.Cpf.validate("71402565860"));
             });

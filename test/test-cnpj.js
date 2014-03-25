@@ -18,6 +18,22 @@
                 ok(returnOne === returnTwo);
             });
 
+            test("Validate Returns True If CNPJ Is Valid And Has Leading Whitespace", function () {
+                ok(maoli.Cnpj.validate("     63943315000192"));
+            });
+
+            test("Validate Returns True If CNPJ Is Valid And Has Trailing Whitespace", function () {
+                ok(maoli.Cnpj.validate("63943315000192     "));
+            });
+
+            test("Validate Returns True If CNPJ Is Valid And Has Leading And Trailing Whitespace", function () {
+                ok(maoli.Cnpj.validate("    63943315000192     "));
+            });
+
+            test("Validate Returns False If CNPJ Is Null", function () {
+                ok(!maoli.Cnpj.validate(null));
+            });
+
             test("Validate Returns True If CNPJ Is Valid", function () {
                 ok(maoli.Cnpj.validate("63943315000192"));
             });
