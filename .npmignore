@@ -1,0 +1,12 @@
+# Ignore QUnit folder and files
+
+test/
+
+# Ignore the Nuspec file
+maoli.js.nuspec
+
+# Ignore GIT files
+.gitattributes
+
+# Ignore .npmignore
+.npmignore

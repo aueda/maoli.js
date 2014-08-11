@@ -55,6 +55,14 @@ To install Maoli.js using NuGet, run the following command in the Package Manage
 PM> Install-Package Maoli.js
 ```
 
+## npm Package
+
+To install Maoli.js using npm, run the following command in the console:
+
+```
+PM> npm install maoli
+```
+
 ## Source Code
 
 Source code is available at [GitHub](https://github.com/aueda/maoli.js/).
