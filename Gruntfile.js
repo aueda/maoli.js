@@ -11,6 +11,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         'closure-compiler': {
             frontend: {
+                closurePath: '.',
                 js: 'maoli.js',
                 jsOutputFile: 'maoli.min.js',
                 createSourceMap: 'maoli.min.map',
