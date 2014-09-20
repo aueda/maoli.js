@@ -9,9 +9,13 @@ notifications:
 
 before_script:
 
+  - curl -O http://dl.google.com/closure-compiler/compiler-latest.zip
+  - unzip compiler.jar compiler-latest.zip
+
   - npm install grunt --save-dev
   - npm install grunt-cli --save-dev
   - npm install grunt-contrib-qunit --save-dev
+  - npm install grunt-closure-compiler --save dev
 
 script:
-  - grunt qunit --verbose --force
+  - grunt --verbose --force
