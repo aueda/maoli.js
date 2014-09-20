@@ -1,24 +1,25 @@
 {
-  "name": "maoli",
-  "version": "0.2.2",
-  "description": "Maoli.js is JavaScript helper library for common brazilian business rules (CPF, CNPJ and CEP).",
-  "main": "maoli.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aueda/maoli.js.git"
-  },
-  "keywords": [
-    "cpf",
-    "cnpj",
-    "cep",
-    "validation"
-  ],
+    "name": "maoli",
+    "version": "0.2.3",
+    "description": "Maoli.js is JavaScript helper library for common brazilian business rules (CPF, CNPJ and CEP).",
+    "main": "maoli.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aueda/maoli.js.git"
+    },
+    "keywords": [
+        "cep",
+        "cpf",
+        "cnpj",
+        "cep",
+        "validation"
+    ],
   "author": "Adriano Ueda",
   "license": "MIT",
   "bugs": {

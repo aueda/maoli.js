@@ -1,4 +1,13 @@
-﻿// ==ClosureCompiler==
+﻿//
+// Maoli.js
+// JavaScript helper library for common brazilian business rules
+// 
+// https://github.com/aueda/maoli.js
+//
+// @author Adriano Ueda
+// @version 0.2.3
+
+// ==ClosureCompiler==
 // @output_file_name maoli.min.js
 // @compilation_level SIMPLE_OPTIMIZATIONS
 // ==/ClosureCompiler==
@@ -14,7 +23,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.2.2";
+    maoli.version = "0.2.3";
 
     if (typeof String.prototype.trim !== "function") {
         String.prototype.trim = function () {
