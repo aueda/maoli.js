@@ -2,11 +2,17 @@
 
 test/
 
-# Ignore the Nuspec file
+# Ignore NuGet files
 maoli.js.nuspec
 
 # Ignore GIT files
 .gitattributes
 
-# Ignore .npmignore
+# Ignore NPM files
 .npmignore
+
+# Ignore Travis-CI files
+.travis.yml
+
+# Ignore Grunt files
+Gruntfile.js
