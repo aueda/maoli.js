@@ -10,7 +10,8 @@ notifications:
 before_script:
 
   - curl -O http://dl.google.com/closure-compiler/compiler-latest.zip
-  - unzip compiler-latest.zip compiler.jar
+  - mkdir build
+  - unzip compiler-latest.zip compiler.jar -d build
 
   - npm install grunt --save-dev
   - npm install grunt-cli --save-dev
