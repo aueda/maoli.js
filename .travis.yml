@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+notifications:
+    email:
+        - adriano.ueda@gmail.com
+
+before_script:
+
+  - npm install grunt --save-dev
+  - npm install grunt-cli --save-dev
+  - npm install grunt-contrib-qunit --save-dev
+
+script:
+  - grunt qunit --verbose --force
