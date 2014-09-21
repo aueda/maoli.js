@@ -30,5 +30,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask("default", "closure-compiler");
+    grunt.registerTask("minify", "closure-compiler");
+
+    grunt.registerTask("test", "qunit");
+
+    grunt.registerTask("default", "closure-compiler qunit");
 }
