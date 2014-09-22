@@ -34,5 +34,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask("test", "qunit");
 
-    grunt.registerTask("default", "closure-compiler qunit");
+    grunt.registerTask("default", "minify test");
 }
