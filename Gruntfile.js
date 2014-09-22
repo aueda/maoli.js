@@ -14,12 +14,12 @@ module.exports = function (grunt) {
                 closurePath: '.',
                 js: 'maoli.js',
                 jsOutputFile: 'maoli.min.js',
-                createSourceMap: 'maoli.min.map',
-                sourceMapFormat: 'V3',
                 maxBuffer: 500,
                 options: {
                     compilation_level: 'SIMPLE_OPTIMIZATIONS',
-                    language_in: 'ECMASCRIPT5_STRICT'
+                    language_in: 'ECMASCRIPT5_STRICT',
+                    create_source_map: 'maoli.min.map',
+                    source_map_format: 'V3'
                 }
             }
         },
