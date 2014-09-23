@@ -1,0 +1,18 @@
+# Ignore QUnit folder and files
+
+test/
+
+# Ignore NuGet files
+maoli.js.nuspec
+
+# Ignore GIT files
+.gitattributes
+
+# Ignore NPM files
+.npmignore
+
+# Ignore Travis-CI files
+.travis.yml
+
+# Ignore Grunt files
+Gruntfile.js

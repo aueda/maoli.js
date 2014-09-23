@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata minClientVersion="2.5">
         <id>Maoli.js</id>
-        <version>0.2.2</version>
+        <version>0.2.3</version>
         <title>Maoli.js</title>
         <authors>Adriano Ueda</authors>
         <owners>Adriano Ueda</owners>
@@ -11,10 +11,8 @@
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ). For documentation visit https://github.com/aueda/maoli.js</description>
         <summary>Maoli.js is JavaScript helper library for common brazilian business rules (CPF, CNPJ and CEP).</summary>
-        <releaseNotes>- Implemented CEP validation
-- Bug fixes
-- Included source map file</releaseNotes>
-        <copyright>Copyright (c) 2013 Adriano Ueda</copyright>
+        <releaseNotes>- Bug fixes</releaseNotes>
+        <copyright>Copyright (c) 2014 Adriano Ueda</copyright>
         <language />
         <tags>JavaScript Cpf Cnpj Cep</tags>
     </metadata>

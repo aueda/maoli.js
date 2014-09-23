@@ -1,3 +1,15 @@
+//
+// Maoli.js
+// JavaScript helper library for common brazilian business rules
+// 
+// https://github.com/aueda/maoli.js
+//
+// @author Adriano Ueda
+// @version 0.2.3
+
+/*globals
+    module
+*/
 (function (window) {
 
     "use strict";
@@ -6,7 +18,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.2.2";
+    maoli.version = "0.2.3";
 
     if (typeof String.prototype.trim !== "function") {
         String.prototype.trim = function () {
@@ -242,4 +254,7 @@
         };
     }());
 
+    if (module !== undefined) {
+        module.exports = maoli;
+    }
 }(this));
