@@ -1,6 +1,6 @@
 #Maoli.js
 
-[![Build Status](https://travis-ci.org/aueda/maoli.js.svg?branch=feat-travis-ci)](https://travis-ci.org/aueda/maoli.js/)
+[![Build Status](https://travis-ci.org/aueda/maoli.js.svg?branch=master)](https://travis-ci.org/aueda/maoli.js/)
 
 Maoli.js is JavaScript helper library for common brazilian business rules (CEP, CPF and CNPJ).
 
