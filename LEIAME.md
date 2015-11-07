@@ -1,8 +1,10 @@
 #Maoli.js
 
 [![Bate-papo em https://gitter.im/aueda/maoli.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aueda/maoli.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/aueda/maoli.js.svg?branch=master)](https://travis-ci.org/aueda/maoli.js/)
 
+Versão em inglês: [LEIAME.md](https://github.com/aueda/maoli.js/)
 
 Maoli.js é uma biblioteca em JavaScript para regras de negócios brasileiras comuns (CEP, CPF and CNPJ).
 
@@ -12,7 +14,7 @@ Implementa:
 * Validaçao de CPF
 * Validacao de CNPJ
 
-Para validação de CEP, CPF e CNPJ em .NET por favor consulte [Maoli](https://github.com/aueda/maoli/).
+Para validação de CEP, CPF e CNPJ em .NET, por favor consulte [Maoli](https://github.com/aueda/maoli/).
 
 ## Documentação
 

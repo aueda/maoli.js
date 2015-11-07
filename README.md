@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/aueda/maoli.js.svg?branch=master)](https://travis-ci.org/aueda/maoli.js/)
 
+Versão em português: [LEIAME.md](https://github.com/aueda/maoli.js/blob/master/LEIAME.md)
 
 Maoli.js is JavaScript helper library for common brazilian business rules (CEP, CPF and CNPJ).
 
