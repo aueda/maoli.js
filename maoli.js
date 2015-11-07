@@ -5,7 +5,7 @@
 // https://github.com/aueda/maoli.js
 //
 // @author Adriano Ueda
-// @version 0.2.3
+// @version 0.2.5
 
 /*globals
     module
@@ -32,7 +32,7 @@
 
     window.Maoli = maoli;
 
-    maoli.version = "0.2.3";
+    maoli.version = "0.2.5";
 
     maoli.Cep = (function () {
         var regexFlags = "gi",

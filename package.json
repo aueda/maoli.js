@@ -1,6 +1,6 @@
 {
     "name": "maoli",
-    "version": "0.2.3",
+    "version": "0.2.5",
     "description": "Maoli.js is JavaScript helper library for common brazilian business rules (CPF, CNPJ and CEP).",
     "main": "maoli.js",
     "directories": {
