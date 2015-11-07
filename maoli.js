@@ -1,7 +1,7 @@
 //
 // Maoli.js
 // JavaScript helper library for common brazilian business rules
-// 
+//
 // https://github.com/aueda/maoli.js
 //
 // @author Adriano Ueda
@@ -10,33 +10,36 @@
 /*globals
     module
 */
+/*jslint
+    this
+*/
 (function (window) {
 
     "use strict";
 
-    var maoli = window.Maoli || {};
+    var maoli = window.Maoli || {},
+
+        trim = function (value) {
+
+            var result = value;
+
+            result = (typeof String.prototype.trim !== "function")
+                ? value.replace(/^\s\s*/, "").replace(/\s\s*$/, "")
+                : value.trim();
+
+            return result;
+        };
 
     window.Maoli = maoli;
 
     maoli.version = "0.2.3";
 
-    if (typeof String.prototype.trim !== "function") {
-        String.prototype.trim = function () {
-
-            if (!this) {
-                return this;
-            }
-
-            return this.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
-        };
-    }
-
     maoli.Cep = (function () {
         var regexFlags = "gi",
 
             regexValidations = {
-                loose: "^(\\d{5}\\-\\d{3}|\\d{8})$",
-                strict: "^(\\d{5}\\-\\d{3})$"
+                loose: "^(\\d{5}-\\d{3}|\\d{8})$",
+                strict: "^(\\d{5}-\\d{3})$"
             },
 
             validate = function (value, punctuation) {
@@ -46,7 +49,7 @@
 
                 punctuation = punctuation || "loose";
 
-                value = value.trim();
+                value = trim(value);
 
                 if (!regexValidations[punctuation]) {
                     return false;
@@ -71,8 +74,8 @@
         var regexFlags = "gi",
 
             regexValidations = {
-                loose: "^(\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2})|(\\d{11})$",
-                strict: "^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$"
+                loose: "^(\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2})|(\\d{11})$",
+                strict: "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$"
             },
 
             formatIsValid = function (value, punctuation) {
@@ -82,7 +85,7 @@
 
                 punctuation = punctuation || "loose";
 
-                value = value.trim();
+                value = trim(value);
 
                 if (value === "") {
                     return false;
@@ -102,22 +105,23 @@
             },
 
             sanitize = function (value) {
-                var sanitized = value
-                    .trim()
+                var sanitized = trim(value)
                     .toLowerCase()
                     .replace(/\./g, "")
-                    .replace(/\-/g, "");
+                    .replace(/-/g, "");
 
                 return sanitized;
             },
 
             createChecksum = function (text) {
-                var i = 0,
+                var i = text.length - 1,
                     sum = 0,
                     digit = 0;
 
-                for (i = text.length - 1; i > -1; i -= 1) {
+                while (i > -1) {
                     sum += parseInt(text.substring(i, i + 1), 10) * (text.length + 1 - i);
+
+                    i -= 1;
                 }
 
                 digit = 11 - (sum % 11);
@@ -168,8 +172,8 @@
             regexFlags = "gi",
 
             regexValidations = {
-                loose: "^(\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2})|(\\d{14})$",
-                strict: "^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2}$"
+                loose: "^(\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}-\\d{2})|(\\d{14})$",
+                strict: "^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}-\\d{2}$"
             },
 
             formatIsValid = function (value, punctuation) {
@@ -179,7 +183,7 @@
 
                 punctuation = punctuation || "loose";
 
-                value = value.trim();
+                value = trim(value);
 
                 if (value === "") {
                     return false;
@@ -199,28 +203,31 @@
             },
 
             sanitize = function (value) {
-                var sanitized = value
-                    .trim()
+                var sanitized = trim(value)
                     .toLowerCase()
                     .replace(/\./g, "")
-                    .replace(/\-/g, "")
+                    .replace(/-/g, "")
                     .replace(/\//g, "");
 
                 return sanitized;
             },
 
             createChecksum = function (text, multiplier) {
-                var i = 0,
+                var i = text.length - 1,
                     sum = 0,
                     digit = 0,
                     remainder = 0;
 
-                for (i = text.length - 1; i > -1; i -= 1) {
+                while (i > -1) {
                     sum += parseInt(text.substring(i, i + 1), 10) * multiplier[i];
+
+                    i -= 1;
                 }
 
                 remainder = (sum % 11);
-                digit = (remainder < 2) ? 0 : 11 - remainder;
+                digit = (remainder < 2)
+                    ? 0
+                    : 11 - remainder;
 
                 return digit;
             },
