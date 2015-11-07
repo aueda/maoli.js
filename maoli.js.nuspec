@@ -12,7 +12,8 @@
         <description>Maoli.js is JavaScript helper library for common brazilian business rules (CPF and CNPJ). For documentation visit https://github.com/aueda/maoli.js</description>
         <summary>Maoli.js is JavaScript helper library for common brazilian business rules (CPF, CNPJ and CEP).</summary>
         <releaseNotes>- Bug fixes
-- Added README in Brazilian Portuguese</releaseNotes>
+- Added README in Brazilian Portuguese
+- Added the jQuery Validation adapter</releaseNotes>
         <copyright>Copyright (c) 2015 Adriano Ueda</copyright>
         <language />
         <tags>JavaScript Cpf Cnpj Cep</tags>
