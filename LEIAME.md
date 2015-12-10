@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/aueda/maoli.js.svg?branch=master)](https://travis-ci.org/aueda/maoli.js/)
 
-Versão em inglês: [README.md](https://github.com/aueda/maoli.js/)
+English version: [README.md](https://github.com/aueda/maoli.js/)
 
 Maoli.js é uma biblioteca em JavaScript para regras de negócios brasileiras comuns (CEP, CPF and CNPJ).
 
